@@ -67,6 +67,15 @@
   ]
 }
 
+// ---------- Champs de trame / paquet (schémas d'en-têtes) ----------
+#let field(label, width, fill: codebg) = box(width: width, height: 0.72cm, fill: fill,
+  stroke: 0.5pt + slate, align(center + horizon,
+    text(font: "IBM Plex Mono", size: 7.5pt, fill: ink)[#label]))
+#let fieldrow(label, ..fields) = grid(columns: (2.4cm, auto),
+  align: (right + horizon, left + horizon), gutter: 8pt,
+  text(size: 8pt, fill: slate)[#label],
+  stack(dir: ltr, spacing: 0pt, ..fields.pos()))
+
 // ---------- Template principal ----------
 #let chapter(module: "", module-no: "", chapter-no: "", title: "", subtitle: "",
              volume: "Edunos Studio — Ultimate Ethical Hacking Academy", body) = {
