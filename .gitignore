@@ -1,0 +1,6 @@
+# Sorties de démo & previews
+pdf/example.pdf
+*.png
+# Cache Typst / OS
+.typst-cache/
+.DS_Store
