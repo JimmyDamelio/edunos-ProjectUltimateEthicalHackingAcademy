@@ -100,7 +100,7 @@
   set heading(numbering: none)
 
   show heading.where(level: 1): it => block(width: 100%, breakable: false)[
-    #set text(font: "IBM Plex Sans SmBld", size: 20pt, fill: ink)
+    #set text(font: "IBM Plex Sans SmBld", size: 20pt, fill: ink, hyphenate: false)
     #set par(justify: false, leading: 0.4em)
     #v(2pt) #it.body #v(2pt)
     #line(length: 38%, stroke: 2pt + brick) #v(4pt)
