@@ -21,6 +21,29 @@
 // ---------- Figure légendée ----------
 #let figura(body, caption: "") = figure(body, caption: caption, kind: "fig", supplement: [Figure])
 
+// ---------- Déroulé numéroté (phases, timeline, étapes) ----------
+// stepper(("Titre", "description"), ("Titre", "description"), ...)
+#let stepper(..etapes) = {
+  let items = etapes.pos()
+  block(width: 100%, inset: (y: 4pt))[
+    #for (i, e) in items.enumerate() {
+      grid(columns: (auto, 1fr), gutter: 12pt, align: (center + horizon, left + horizon),
+        box(width: 1.1cm, height: 1.1cm, radius: 50%, fill: brick, inset: 0pt,
+          align(center + horizon, text(font: "IBM Plex Sans SmBld", fill: paper, size: 12pt)[#(i + 1)])),
+        align(left, box(inset: (y: 6pt), width: 100%)[
+          #set par(justify: false)
+          #text(font: "IBM Plex Sans SmBld", size: 10pt, fill: ink)[#e.at(0)]
+          #linebreak()
+          #text(size: 9pt, fill: slate)[#e.at(1)]
+        ]))
+      if i < items.len() - 1 {
+        place(dx: 0.52cm, line(start: (0pt, 0pt), end: (0pt, 10pt), stroke: 1.5pt + rule))
+        v(10pt)
+      }
+    }
+  ]
+}
+
 // ---------- Couverture ----------
 #let cover(module: "", module-no: "", title: "", subtitle: "", volume: "") = {
   page(fill: paper, margin: 0pt, header: none, footer: none)[
@@ -84,7 +107,7 @@
   show raw.where(block: false): it => box(fill: rgb("#efe8da"), inset: (x: 3pt),
     outset: (y: 2pt), radius: 2pt, text(font: "IBM Plex Mono", size: 9pt, fill: brick, it))
 
-  show figure.where(kind: "fig"): it => block(above: 1em, below: 1em, width: 100%)[
+  show figure.where(kind: "fig"): it => block(above: 1em, below: 1em, width: 100%, breakable: true)[
     #align(center, it.body)
     #v(3pt)
     #text(font: "IBM Plex Sans", size: 8pt, fill: slate)[#it.supplement #it.counter.display() — #it.caption.body]
