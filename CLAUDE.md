@@ -9,7 +9,7 @@ haut de gamme (niveau « formation à 3 000 € »). Le propriétaire parle fran
 - Numérotation **globale** des chapitres. Dossier : `src/mMM-chNN-slug/chapter.typ` → `pdf/mMM-chNN-slug.pdf`.
 
 ## Règles de production (non négociables)
-- **Un chapitre = un fichier source = un PDF = un commit.** Lots de **10 chapitres**, puis STOP et attendre la validation.
+- **Un chapitre = un fichier source = un PDF = un commit.** Lots de **4 chapitres**, puis STOP et attendre la validation.
 - Chaque chapitre : écrire → build → **vérifier visuellement chaque page** → corriger → commit → push.
 - Jamais d'invention : pas d'option de commande, de CVE ou de référence inventée. Sources officielles, datées.
 - Cadre éthique permanent : tout exercice offensif en **laboratoire isolé ou périmètre autorisé**, avec volet défensif.
