@@ -55,7 +55,8 @@ Volumes : I Fondations (M00–02), II Systèmes (M03–06), III Offensif (M07+).
 - `#include` ne voit pas les variables : `#import`.
 - Grilles de texte dans une figure : forcer `align(left, …)`.
 - Tableaux : 1re colonne en largeur fixe `(3.6cm, 1fr)` ; chaînes sans espace (IP, chemins) → colonne large ou `raw`.
-- Lignes de code ≤ ~68 caractères en bloc (sinon retour à la ligne disgracieux) ; commentaires courts.
+- Glyphes absents d'IBM Plex Serif : ★ et dessin de boîte (━ ├ └ │) → police de secours (FreeSerif…). Utiliser des formes dessinées (`circle`, `line`) ou `font: "IBM Plex Mono"` (qui a ├ └ │ ━ →). Vérifier avec `pdffonts` : seules des polices IBMPlex doivent apparaître.
+- Lignes de code ≤ ~60 caractères en bloc (sinon retour à la ligne disgracieux) ; commentaires courts.
 - Figure haute en bas de page : `block(breakable: false, …)`.
 
 ## 5. Build et vérification (obligatoire pour CHAQUE chapitre)
