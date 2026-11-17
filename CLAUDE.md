@@ -3,9 +3,10 @@
 Formation professionnelle en Ethical Hacking & Pentesting, **en français**, produit commercial
 haut de gamme (niveau « formation à 3 000 € »). Le propriétaire parle français : répondre en français.
 
-## État (mis à jour au chapitre 50)
+## État (mis à jour au chapitre 54)
 - Branche de travail : `claude/vibrant-babbage-b2raov` (tout y est ; `main` est vide). Push autorisé en permanence.
-- Chapitres 1 à 50 faits (Modules 00 à 09 complets, M10 commencé). Prochain : **ch51**.
+- Chapitres 1 à 54 faits (Modules 00 à 10 complets, M11 commencé). Prochain : **ch55**.
+- Contrôle visuel économe : `python3 tools/planche.py <src> /tmp/planche.png 40` (toutes les pages sur une image) + `tools/pages.sh` ; zoomer seulement sur les pages suspectes.
 - Numérotation **globale** des chapitres. Dossier : `src/mMM-chNN-slug/chapter.typ` → `pdf/mMM-chNN-slug.pdf`.
 
 ## Règles de production (non négociables)
