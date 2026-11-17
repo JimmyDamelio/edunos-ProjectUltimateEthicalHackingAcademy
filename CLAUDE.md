@@ -15,6 +15,11 @@ haut de gamme (niveau « formation à 3 000 € »). Le propriétaire parle fran
 - Cadre éthique permanent : tout exercice offensif en **laboratoire isolé ou périmètre autorisé**, avec volet défensif.
   Pour les sujets sensibles (Windows, AD, exploitation, évasion) : « comprendre pour défendre », pratique en lab, pas de recette d'attaque contre un tiers.
 
+## Économie de tokens
+Le plugin **ponytail** (mode « lazy senior dev ») peut être actif pour réduire les tokens : il s'applique aux
+réponses dans le terminal, aux scripts et à l'outillage, **jamais au contenu des chapitres**, qui doit rester
+complet et approfondi (voir ci-dessous). En cas de conflit, la qualité pédagogique l'emporte.
+
 ## Exigence pédagogique (à relever par rapport aux ch1–50, souvent trop courts : 5–7 pages)
 Viser **10 à 16 pages** par chapitre, dense, sans remplissage. Pour chaque notion, quand c'est pertinent :
 définition précise · fonctionnement interne · intérêt en pentest · commandes réelles avec **chaque paramètre expliqué** ·
