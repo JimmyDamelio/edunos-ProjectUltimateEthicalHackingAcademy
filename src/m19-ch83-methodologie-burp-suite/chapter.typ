@@ -186,10 +186,9 @@ navigateur de test. On *observe et manipule* le trafic de sa propre appli de lab
   → observer » qui est au cœur de la compréhension et du test manuel d'une faille.
 + *Pratique* : Burp ne traite que l'application visée, sans bruit inutile. *Éthique* : on évite
   d'intercepter ou de rejouer par erreur du trafic hors périmètre, ce qui serait une sortie de cadre.
-+ On intercepte la requête du formulaire et on la *rejoue depuis Repeater* avec une valeur que la
-  validation JavaScript aurait refusée : si le serveur l'accepte, c'est que la validation n'existe que
-  côté client. Recommandation : *valider et assainir côté serveur* toute entrée, la validation client
-  n'étant qu'un confort d'ergonomie, jamais une sécurité.
++ On rejoue la requête du formulaire *depuis Repeater* avec une valeur que la validation JavaScript
+  aurait refusée : si le serveur l'accepte, la validation n'existe que côté client. Recommandation :
+  *valider et assainir côté serveur* toute entrée, le contrôle client n'étant qu'un confort.
 
 == Résumé du chapitre
 
@@ -200,8 +199,7 @@ navigateur de test. On *observe et manipule* le trafic de sa propre appli de lab
 - *Burp Suite* : les modules clés sont *Proxy* (intercepter) et *Repeater* (rejouer/modifier) ; *Target*
   cartographie, *Intruder* automatise.
 - On configure proxy, certificat (station de test uniquement) et *portée* ; on teste *une variable à la
-  fois*.
-- On teste *sans casser* (débit limité, prudence sur les actions destructrices).
+  fois*, *sans casser* (débit limité, prudence sur les actions destructrices).
 - Défense : la validation *côté serveur* reste la vraie protection ; un WAF aide mais se contourne ; la
   journalisation détecte les tests/attaques.
 
@@ -232,3 +230,4 @@ Sources consultées (vérifiées le 18 novembre 2026) :
 - PortSwigger — documentation de Burp Suite : #link("https://portswigger.net/burp/documentation")[portswigger.net]
 - OWASP — _ZAP_ (alternative libre) : #link("https://www.zaproxy.org/docs/")[zaproxy.org]
 - PortSwigger — _Web Security Academy_ (apprentissage en labo) : #link("https://portswigger.net/web-security")[portswigger.net/web-security]
+- OWASP — _Input Validation Cheat Sheet_ : #link("https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html")[cheatsheetseries.owasp.org]
