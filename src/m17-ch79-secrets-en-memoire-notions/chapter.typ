@@ -178,8 +178,7 @@ observe des emplacements et on applique des protections, sans procédure d'extra
   emplacement montre deux points de coupure : empêcher l'élévation prive de l'accès aux secrets, et
   limiter leur valeur empêche la propagation.
 + _Credential Guard_ rend les secrets *plus durs à atteindre* (isolation par virtualisation) ; le
-  _tiering_ *réduit leur valeur* (un compte volé sur un poste n'ouvre pas les niveaux supérieurs). L'un
-  élève la barrière, l'autre limite les conséquences d'un vol.
+  _tiering_ *réduit leur valeur* (un compte volé sur un poste n'ouvre pas les niveaux supérieurs).
 + Risque : en se connectant en interactif, l'administrateur laisse des éléments d'authentification *de
   haut privilège* en cache sur un poste *déjà compromis* ; l'attaquant, déjà administrateur local,
   pourrait les réutiliser pour atteindre le domaine. Recommandation : *tiering* strict (les comptes
@@ -192,8 +191,8 @@ observe des emplacements et on applique des protections, sans procédure d'extra
   *exposition* dépend des privilèges requis et des protections.
 - Les atteindre exige des privilèges élevés : le vol de secrets suit l'*élévation* (M17) et précède le
   *mouvement latéral* (M18/M20).
-- On nomme les *catégories* (lecture mémoire, ruches, réutilisation de condensats/tickets, vol de
-  jetons) pour les *détecter*, sans mode opératoire.
+- On nomme les *catégories* (lecture mémoire, ruches, réutilisation de condensats/tickets, jetons) pour
+  les *détecter*, sans mode opératoire.
 - Les protections modernes *élèvent la barrière* (Credential Guard, LSA protégé) et *réduisent la
   valeur* des secrets (tiering, gMSA, moins de caches).
 - En mission, le vol de secrets démontre un impact de rebond, sous garde-fous stricts ; jamais en clair.
@@ -225,4 +224,3 @@ Sources consultées (vérifiées le 18 novembre 2026) :
 - Microsoft Learn — _Protecting LSA_ et _Securing privileged access (tiering)_ : #link("https://learn.microsoft.com/security/privileged-access-workstations/")[learn.microsoft.com]
 - Microsoft Learn — _Group Managed Service Accounts_ (gMSA) : #link("https://learn.microsoft.com/windows-server/security/group-managed-service-accounts/")[learn.microsoft.com]
 - MITRE ATT&CK — _Credentials from Password Stores_ (T1555), _OS Credential Dumping_ (T1003), _Use Alternate Authentication Material_ (T1550) : #link("https://attack.mitre.org/techniques/T1003/")[attack.mitre.org]
-- NIST — _SP 800-63B_ (gestion des secrets d'authentification) : #link("https://pages.nist.gov/800-63-3/sp800-63b.html")[pages.nist.gov/800-63-3]
